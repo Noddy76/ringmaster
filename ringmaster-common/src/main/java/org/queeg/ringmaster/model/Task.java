@@ -18,8 +18,7 @@ public interface Task {
 
   /**
    * List the required {@link Resource}s that this task requires against the
-   * class or resource types that they must provide. The type would typlically
-   * be either {@link SingleResource} or {@link ChronoResource}.
+   * class or resource types that they must provide.
    * 
    * @return a {@link Map} of {@link Resource} names to required classes
    */
