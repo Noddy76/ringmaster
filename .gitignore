@@ -1,0 +1,7 @@
+# eclipse workspace files
+.project
+.classpath
+.settings
+
+# maven artifacts
+target
