@@ -69,7 +69,7 @@ public interface Task {
    * @return the current or last {@link ExecutionLog} or null if this task has
    *         never been executed
    */
-  ExecutionLog getLastExecutionLog();
+  ExecutionLog getLatestExecutionLog();
 
   /**
    * Execute this task
