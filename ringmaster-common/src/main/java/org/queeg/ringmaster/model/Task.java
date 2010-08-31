@@ -3,7 +3,7 @@ package org.queeg.ringmaster.model;
 import java.util.Collection;
 import java.util.Map;
 
-public interface Task {
+public interface Task extends Runnable {
   /**
    * 
    * @return the name of this task
