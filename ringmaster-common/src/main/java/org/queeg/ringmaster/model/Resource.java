@@ -1,6 +1,7 @@
 package org.queeg.ringmaster.model;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Date;
 
 public interface Resource {
@@ -24,8 +25,9 @@ public interface Resource {
    * @return The time this resource was last updated
    * @throws FileNotFoundException
    *           If the resource does not exist
+   * @throws IOException 
    */
-  Date getLastChanged() throws FileNotFoundException;
+  Date getLastChanged() throws IOException;
 
   /**
    * Get a reference back to the task that generates this resource

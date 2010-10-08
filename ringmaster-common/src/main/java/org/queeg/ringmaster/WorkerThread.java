@@ -1,17 +1,22 @@
 package org.queeg.ringmaster;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 import org.queeg.ringmaster.model.Task;
 
 public class WorkerThread extends Thread {
-  private static int index = 0;
+  private static AtomicInteger index = new AtomicInteger();
 
+  private final Task task;
+  
   public WorkerThread(Task task) {
-    super(task, "Worker-" + getNextNumber());
-    // TODO Auto-generated constructor stub
-  }
+    super(task, "Worker-" + index.incrementAndGet());
 
-  private static synchronized int getNextNumber() {
-    return ++index;
+    this.task = task;
   }
-
+  
+  @Override
+  public void run() {
+    task.execute();
+  }
 }
